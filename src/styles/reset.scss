@@ -1,0 +1,132 @@
+/* reset.scss */
+ 
+/* 基础样式重置 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 统一盒模型计算方式 */
+  margin: 0;
+  padding: 0;
+}
+ 
+/* 根元素基础设置 */
+html {
+  line-height: 1.15; /* 基础行高 */
+  -webkit-text-size-adjust: 100%; /* 禁用iOS字体调整 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 移除移动端点击高亮 */
+}
+ 
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility; /* 优化文本渲染 */
+  -webkit-font-smoothing: antialiased; /* 抗锯齿 */
+  font-family: system-ui, -apple-system, sans-serif; /* 系统默认字体栈 */
+}
+ 
+/* 标题元素重置 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+  font-weight: inherit;
+}
+ 
+/* 段落文本 */
+p {
+  line-height: 1.5;
+}
+ 
+/* 列表重置 */
+ul,
+ol,
+menu {
+  list-style: none;
+}
+ 
+/* 链接样式 */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+ 
+  &:hover {
+    text-decoration: underline;
+  }
+}
+ 
+/* 媒体元素 */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block; /* 移除默认间隙 */
+}
+ 
+/* 表单元素重置 */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* 继承字体设置 */
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 0.5rem;
+  appearance: none; /* 移除浏览器默认样式 */
+ 
+  &:focus {
+    outline: 2px solid #42b983; /* 自定义焦点样式 */
+    outline-offset: 2px;
+  }
+}
+ 
+/* 按钮重置 */
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: #fff;
+ 
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+ 
+/* 表格重置 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+ 
+/* 其他元素重置 */
+hr {
+  border: 0;
+  height: 1px;
+  background: #eee;
+}
+ 
+figure,
+figcaption {
+  display: block;
+}
+ 
+/* 可访问性优化 */
+[aria-hidden="true"] {
+  display: none !important;
+}
+ 
+/* 滚动条样式（可选） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
